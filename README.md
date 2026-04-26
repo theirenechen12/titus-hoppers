@@ -28,34 +28,9 @@ It has five modules: Pawbert Lynxley and Gary De'Snake from *Zootopia 2*, King G
 - Easy to read modules
 - Media embedded to give a visualization for each potential candidate
 
-## Functional Requirements
+## Usage
 
-### 1. Project Structure and Organization
+Since this is just code used to develop my web application for determining the gender of a character and is used to debunk misinformation, it is not reusable. It is still, nevertheless, useful, due to its readability.
 
-**User Story:** As a developer, I want a well-organized project structure, so I can maintain and scale the application efficiently.
-
-#### Acceptance Criteria
-
-1. The project shall follow a modular architecture with clear separation of concerns.
-2. The documentation shall be organized in a dedicated documentation directory.
-3. The project shall include configuration files for deployment and development.
-
-## Recommended Project Structure
-
-```text
-titus-hoppers/
-|-- Documentation/
-|-- FrontEnd/
-|   |-- HTML/
-|   |   |-- CSS/
-|   |   |-- data/
-|   |   |-- scripts/
-|-- Media/
-`-- README.md
-```
-
-## Non-Functional Considerations
-
-- Ensure modules are easy to read with media easy to access
-- Use HTTPS for all network communication.
-- Design for responsive behavior across desktop and mobile devices.
+Here is the website that this application produces as a result:
+https://theirenechen12.github.io/titus-hoppers/FrontEnd/HTML/index.html#standout
