@@ -1,0 +1,344 @@
+:root {
+  --bg: #f3ece2;
+  --bg-strong: #e0d2bf;
+  --panel: rgba(255, 252, 246, 0.86);
+  --panel-strong: rgba(255, 248, 236, 0.96);
+  --ink: #20150e;
+  --muted: #6b5548;
+  --accent: #af4d2d;
+  --accent-deep: #6f2918;
+  --gold: #c9963b;
+  --shadow: 0 24px 60px rgba(54, 29, 17, 0.16);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(201, 150, 59, 0.28), transparent 28%),
+    radial-gradient(circle at 80% 0%, rgba(175, 77, 45, 0.16), transparent 24%),
+    linear-gradient(135deg, #f8f2e9 0%, #efe2d0 50%, #eadac2 100%);
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.page-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+  gap: 24px;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.sidebar,
+.content > .module-view {
+  backdrop-filter: blur(14px);
+}
+
+.sidebar {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(34, 20, 13, 0.92), rgba(76, 38, 23, 0.9));
+  color: #f7ede4;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  color: #efc482;
+}
+
+.sidebar h1 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 0.95;
+}
+
+.sidebar-copy {
+  margin: 18px 0 24px;
+  color: rgba(247, 237, 228, 0.82);
+  line-height: 1.5;
+}
+
+.module-nav {
+  display: grid;
+  gap: 12px;
+}
+
+.nav-button {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid rgba(255, 231, 200, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible,
+.nav-button.active {
+  transform: translateX(4px);
+  border-color: rgba(255, 213, 143, 0.7);
+  background: rgba(255, 243, 222, 0.14);
+  outline: none;
+}
+
+.nav-kicker,
+.module-kicker {
+  display: block;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.nav-kicker {
+  color: #f1c47d;
+  margin-bottom: 6px;
+}
+
+.nav-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.content {
+  min-width: 0;
+}
+
+.loading-state,
+.module-view {
+  border-radius: var(--radius-xl);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.loading-state {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+}
+
+.module-view {
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  padding: 34px 34px 28px;
+  background:
+    linear-gradient(130deg, rgba(32, 21, 14, 0.96), rgba(91, 44, 24, 0.92)),
+    linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.05));
+  color: #fff4e9;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -30% auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 196, 130, 0.34), transparent 68%);
+  pointer-events: none;
+}
+
+.module-kicker {
+  color: #f0c37c;
+  margin-bottom: 14px;
+}
+
+.hero h2 {
+  margin: 0;
+  max-width: 12ch;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 0.9;
+}
+
+.tagline {
+  max-width: 62ch;
+  margin: 14px 0 0;
+  color: rgba(255, 244, 233, 0.84);
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.summary {
+  padding: 0 34px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 28px 34px 0;
+}
+
+.highlight-card {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(255, 250, 244, 0.95), rgba(241, 228, 211, 0.95));
+  border: 1px solid rgba(130, 82, 49, 0.12);
+}
+
+.highlight-card strong {
+  display: block;
+  color: var(--accent-deep);
+  margin-bottom: 8px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 28px;
+  padding: 28px 34px 34px;
+}
+
+.section-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.section-card,
+.media-card,
+.comparison-card {
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: var(--panel-strong);
+  border: 1px solid rgba(123, 88, 61, 0.12);
+}
+
+.section-card h3,
+.media-panel h3,
+.comparison-panel h3 {
+  margin: 0 0 12px;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 1.45rem;
+}
+
+.section-card p,
+.comparison-card p {
+  margin: 0 0 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.section-card p:last-child,
+.comparison-card p:last-child {
+  margin-bottom: 0;
+}
+
+.media-panel,
+.comparison-panel {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.media-card figure {
+  margin: 0;
+}
+
+.media-card img,
+.media-card video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  background: #d7cab7;
+}
+
+.media-card figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.comparison-card {
+  border-left: 5px solid var(--gold);
+}
+
+.comparison-card h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: var(--accent-deep);
+}
+
+.comparison-position {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(201, 150, 59, 0.16);
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .page-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .highlights,
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .sidebar,
+  .hero,
+  .summary,
+  .highlights,
+  .main-grid {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero {
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
+}
