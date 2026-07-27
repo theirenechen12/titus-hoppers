@@ -25,9 +25,9 @@ It has five modules: Pawbert Lynxley and Gary De'Snake from *Zootopia 2*, King G
 
 ## Core Features
 
-- Easy to read modules
+- Easy-to-read modules
 - Media embedded to give a visualization for each potential candidate
 
 ## Usage
 
-Since this is just code used to develop my web application for determining the gender of a character and is used to debunk misinformation, it is not reusable, though it is still, nevertheless, useful, due to its readability and the provision of useful information for educational purposes. The code is still provided, nevertheless, to show the process and how this website was completed, so you have an idea of how to replicate the code for tutorial and learning purposes if you want to learn the programming aspects behind the scenes and not just the gender aspect that is provided at hand the website provides.
+Since this is just code used to develop my web application for determining the gender of a character and is used to debunk misinformation, it is not reusable, though it is still, nevertheless, useful, due to its readability and the provision of useful information for educational purposes. The code is still provided, nevertheless, to show the process and how this website was completed, so you have an idea of how to replicate the code for tutorial and learning purposes if you want to learn the programming aspects behind the scenes and not just the gender aspect that is provided on the website.
